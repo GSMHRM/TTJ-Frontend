@@ -1,11 +1,17 @@
 import React from 'react';
+import Router from './router';
+import { Provider } from 'react-redux';
+import { store } from './stores';
 
 function App() {
+
+
   return (
-    <div className="App">
-      Hi
-      <h1>gegeg</h1>
-    </div>
+    <>
+      <Provider store={store}>
+        <Router />
+      </Provider>
+    </>
   );
 }
 
